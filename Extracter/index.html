@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>PDF To Audio Converter</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>Pdf To Audio</header>
+        <form name="form1" enctype="multipart/form-data" method="post" action="pdf-to-text.php">
+                <label>The Pdf-Audio Script helps convert PDF Documents into AUDIO format.</label>
+                <br/>
+                <div class="row">
+                    <input type="text" name="apiKey" placeholder="API Key" class="form-control"/>
+                </div>
+
+                <div class="row">
+                    <label>Input File (*.pdf)</label>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="8000000" class="form-control"/>
+                    <input type="file" name="file"/>
+                </div>
+
+                <div class="row">
+                    <label>Comma-separated list of page indices (or ranges). Leave empty for all pages. Example: '0,2-5,7-'.</label>
+                    <br/>
+                    <input type="text" name="pages" value="0" class="form-control">
+                </div>
+
+            <input type="submit" name="submit" value="Proceed" class="btn btn-primary form-control" />
+        </form>
+    </div>
+
+</body>
+</html>
